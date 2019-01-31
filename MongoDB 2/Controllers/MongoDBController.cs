@@ -72,7 +72,11 @@ namespace MongoDB_2.Controllers
             {
                 var filter = Builders<MongoDBModel>.Filter.Eq("_id", ObjectId.Parse(id));
                 var update = Builders<MongoDBModel>.Update
-                    .Set("Name", collection.Name);
+                    .Set("Oyuncu", collection.Oyuncu)
+                    .Set("Mevki", collection.Mevki)
+                    .Set("Bonservis", collection.Bonservis)
+                    .Set("Kulup", collection.Kulup)
+                    .Set("Numara", collection.Numara);
                 var result = pc.UpdateOne(filter, update);
 
                 return RedirectToAction("Index");
@@ -105,5 +109,6 @@ namespace MongoDB_2.Controllers
                 return View();
             }
         }
+        public int toplam = 0;
     }
 }

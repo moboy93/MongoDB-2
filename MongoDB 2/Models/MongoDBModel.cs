@@ -11,7 +11,15 @@ namespace MongoDB_2.Models
     {
         [BsonId]
         public ObjectId Id { get; set; }
-        [BsonElement("name")]
-        public string Name { get; set; }
+        [BsonElement("Oyuncu")]
+        public string Oyuncu { get; set; }
+        [BsonElement("Mevki")]
+        public string Mevki { get; set; }
+        [BsonElement("Bonservis")]
+        public decimal Bonservis { get; set; }
+        [BsonElement("Kulup")]
+        public string Kulup { get; set; }
+        [BsonElement("Numara")]
+        public byte Numara { get; set; }
     }
 }
